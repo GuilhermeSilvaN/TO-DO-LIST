@@ -1,0 +1,153 @@
+/* Container principal */
+.insertTask {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Campo de input + botão */
+.field-insert {
+    display: flex;
+    gap: 10px;
+    background-color: #1e1e2f;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Input */
+.insert {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 16px;
+}
+
+/* Botão */
+.add {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.listTask{
+    padding: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lista de tarefas */
+.field-tasks {
+    margin-top: 20px;
+    width: 320px;
+}
+
+/* Cada tarefa */
+.field-tasks p {
+    background-color: #2b2f41;
+    color: rgb(255, 255, 255);
+    border:1px solid #45a049;
+    width: 90%;
+    padding: 10px;
+    transition: 0.2s;
+    margin-right: 7px;
+    border-radius: .6rem;
+}
+
+/* Hover nas tasks */
+.field-tasks p:hover {
+    background-color: #3a3a5a;
+    cursor: pointer;
+}
+
+.btn-x{
+    background: none;
+    padding: 6px 10px;
+    border: 1px solid #4CAF50;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn-x:hover{
+    padding: 8px 12px;
+    background: #1e1e2f;
+    border: none;
+}
+
+
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+/* Esconde o checkbox padrão */
+.checkbox-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Caixa custom */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #eee;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.checkbox-container:hover .checkmark {
+  background-color: #ccc;
+}
+
+/* Quando marcado */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #4CAF50;
+}
+
+/* O "✔" */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Mostra o check */
+.checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Estilo do check */
+.checkmark::after {
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
